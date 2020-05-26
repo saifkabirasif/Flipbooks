@@ -1,0 +1,130 @@
+---
+title: "Creating 100% Stack bar chart with Highcharts"
+subtitle: "A step by step guide"
+author: "Saif Kabir Asif, May 2020"
+output:
+  xaringan::moon_reader:
+    seal: false
+    lib_dir: libs
+    css: xaringan-themer.css
+    nature:
+      ratio: 16:10
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+
+---
+background-image: url(img/logo_Saif.png)
+background-position: 97% 95%
+background-size: 10%
+layout: true
+---
+
+```{r setup, include = F}
+# This is the recommended set up for flipbooks
+knitr::opts_chunk$set(fig.width = 6, message = FALSE, warning = FALSE, comment = "", cache = FALSE, fig.retina = 3)
+library(flipbookr)
+library(tidyverse)
+library(highcharter)
+
+df<-readRDS("data/Stack_Data.rds")
+
+df_wide<-df%>%
+  pivot_wider(
+    names_from = Category,
+    values_from=Releases
+  )
+
+
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent(
+  base_color = "#A6173D",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+)
+```
+
+
+
+class: inverse, center, middle
+
+# Creating 100% Stack bar chart with Highcharts
+## A step by step guide
+<br>
+### Saif Kabir Asif | 26 May 2020
+
+####`r icon::fontawesome$solid$link` [<span style='color:white'> saifkabirasif.com]('https://saifkabirasif.com')
+
+####`r icon::fontawesome$brands$twitter` [<span style='color:white'> @SaifKAsif]('https://twitter.com/SaifKAsif')
+
+
+---
+
+### 100% Stack Bar Chart with Highcharts
+
+####**Background** 
+I was trying to create 100% stack bar showing both number and percentage. Surprisingly enough, it was not easy to do as resources are scarce online. Hence, my humble effort to add this tutorial in the World Wide Web.
+
+####**Packages Used** 
+* **Tidyverse** - The almighty package
+* **Highcharter** - A cool R package by jkunst around Highcharts JS
+
+####**Dataset** 
+Games reviewed by users and critics for Playstation-4, Xbox One and Nintendo Switch up to May 2020 in Metacritic ([**Download here**](./data/df_wide.rds)). The structure is below-
+
+* **Content_Platform**: Console name
+* **D_20_Up**         : Score between Critics and users are more than 20 points apart
+* **D_10_20**         : Score between Critics and users are 10-20 points apart
+* **D_5_10**          : Score between Critics and users are 5-10 points apart
+* **D_0_5**           : Score between Critics and users are 0-5 points apart
+
+---
+
+
+`r chunk_reveal("stack_steps",title="### On with the chart")`
+
+
+```{r stack_steps,include=F}
+
+highchart(height = 500,width = 600 )%>%
+  hc_chart(type="bar")%>%
+  hc_xAxis(categories=df_wide$Content_Platform)%>%
+  hc_add_series(df_wide$D_0_5,name="0-5")%>%
+  hc_add_series(df_wide$D_5_10,name="5-10")%>%
+  hc_add_series(df_wide$D_10_20,name="10-20")%>%
+  hc_add_series(df_wide$D_20_Up,name=">20")%>%
+  hc_colors(colors = c("lightgreen","yellow","orange","red"))%>%
+  hc_plotOptions(series=list(stacking="normal"))%>% #ROTATE
+  hc_plotOptions(series=list(stacking="percent"))%>% #ROTATE
+  hc_plotOptions(series=list(dataLabels = list(enabled = TRUE)))%>%
+  hc_plotOptions(series=list(dataLabels = list(format='{point.y} ({point.percentage:.0f}%)')))%>%
+  hc_tooltip(pointFormat='{series.name} gap<br><b>{point.y} ({point.percentage:.0f}%)</b>')%>%
+  hc_yAxis(gridLineWidth=0)%>%
+  hc_yAxis(labels=list(enabled=FALSE))%>%
+  hc_yAxis(title=list(text="% of Releases"))%>%
+  hc_title(text="Gap between Critic and User metacritic scores")%>%
+  hc_subtitle(text="(in a scale of 100)")
+
+
+```
+
+---
+
+### Acknowledgements
+
+Knowledge has become truly open. The proof - I learnt valuable skills from the blogs of these decorated individuals without leaving my couch. 
+
+* [Yihui Xie](https://yihui.org) - For giving us xaringan
+* [Alison Hill](https://alison.rbind.io) - For great intro to xaringan
+* [Evangeline Reynolds](https://evangelinereynolds.netlify.app) - For awesome flipbook tricks in xaringan
+* [Joshua Kunst](http://jkunst.com) - For highcharter and inspiring me to look at JS based charting
+
+
+
+```{css, eval = TRUE, echo = FALSE}
+.remark-code{line-height: 1.5; font-size: 80%}
+```
