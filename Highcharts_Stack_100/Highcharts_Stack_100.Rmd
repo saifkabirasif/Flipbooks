@@ -112,6 +112,9 @@ highchart(height = 500,width = 600 )%>%
 
 ```
 
+
+
+
 ---
 
 ### Acknowledgements
@@ -128,3 +131,9 @@ Knowledge has become truly open. The proof - I learnt valuable skills from the b
 ```{css, eval = TRUE, echo = FALSE}
 .remark-code{line-height: 1.5; font-size: 80%}
 ```
+
+
+```{r share-again, echo=FALSE}
+xaringanExtra::use_share_again()
+```
+

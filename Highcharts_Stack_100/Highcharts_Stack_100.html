@@ -46,6 +46,11 @@
     <script src="libs/highcharts-7.0.1/custom/symbols-extra.js"></script>
     <script src="libs/highcharts-7.0.1/custom/text-symbols.js"></script>
     <script src="libs/highchart-binding-0.7.0/highchart.js"></script>
+    <script src="libs/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="libs/shareon-1.4.1/shareon.min.css" rel="stylesheet" />
+    <script src="libs/shareon-1.4.1/shareon.min.js"></script>
+    <link href="libs/xaringanExtra-shareagain-0.2.1/shareagain.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-shareagain-0.2.1/shareagain.js"></script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
@@ -98,28 +103,26 @@ Games reviewed by users and critics for Playstation-4, Xbox One and Nintendo Swi
 ---
 
 
-class: split-40
 count: false
  
 ### On with the chart
-.left-code-stack_steps-auto[
+.panel1-stack_steps-auto[
 
 ```r
 *highchart(height = 500,width = 600 )
 ```
 ]
  
-.right-output-stack_steps-auto[
-<div id="htmlwidget-af31fefb69810a4eb1b6" style="width:600px;height:500px;" class="highchart html-widget"></div>
-<script type="application/json" data-for="htmlwidget-af31fefb69810a4eb1b6">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0},"treemap":{"layoutAlgorithm":"squarified"}}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+.panel2-stack_steps-auto[
+<div id="htmlwidget-0e86c82fb4d2839b98f9" style="width:600px;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0e86c82fb4d2839b98f9">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0},"treemap":{"layoutAlgorithm":"squarified"}}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
-class: split-40
 count: false
  
 ### On with the chart
-.left-code-stack_steps-auto[
+.panel1-stack_steps-auto[
 
 ```r
 highchart(height = 500,width = 600 )%&gt;%  
@@ -127,17 +130,16 @@ highchart(height = 500,width = 600 )%&gt;%
 ```
 ]
  
-.right-output-stack_steps-auto[
-<div id="htmlwidget-81d65428a7e426eadc2d" style="width:600px;height:500px;" class="highchart html-widget"></div>
-<script type="application/json" data-for="htmlwidget-81d65428a7e426eadc2d">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+.panel2-stack_steps-auto[
+<div id="htmlwidget-2b22cf55ac49e59ef9af" style="width:600px;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2b22cf55ac49e59ef9af">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
-class: split-40
 count: false
  
 ### On with the chart
-.left-code-stack_steps-auto[
+.panel1-stack_steps-auto[
 
 ```r
 highchart(height = 500,width = 600 )%&gt;%  
@@ -146,17 +148,16 @@ highchart(height = 500,width = 600 )%&gt;%
 ```
 ]
  
-.right-output-stack_steps-auto[
-<div id="htmlwidget-21c10e415a328635fe0c" style="width:600px;height:500px;" class="highchart html-widget"></div>
-<script type="application/json" data-for="htmlwidget-21c10e415a328635fe0c">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+.panel2-stack_steps-auto[
+<div id="htmlwidget-85e9e5763c8736aac56f" style="width:600px;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-85e9e5763c8736aac56f">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
-class: split-40
 count: false
  
 ### On with the chart
-.left-code-stack_steps-auto[
+.panel1-stack_steps-auto[
 
 ```r
 highchart(height = 500,width = 600 )%&gt;%  
@@ -166,17 +167,16 @@ highchart(height = 500,width = 600 )%&gt;%
 ```
 ]
  
-.right-output-stack_steps-auto[
-<div id="htmlwidget-0cc1e1217b91cb3e0601" style="width:600px;height:500px;" class="highchart html-widget"></div>
-<script type="application/json" data-for="htmlwidget-0cc1e1217b91cb3e0601">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"}]},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+.panel2-stack_steps-auto[
+<div id="htmlwidget-6442c05e43478d5197f4" style="width:600px;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6442c05e43478d5197f4">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"}]},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
-class: split-40
 count: false
  
 ### On with the chart
-.left-code-stack_steps-auto[
+.panel1-stack_steps-auto[
 
 ```r
 highchart(height = 500,width = 600 )%&gt;%  
@@ -187,17 +187,16 @@ highchart(height = 500,width = 600 )%&gt;%
 ```
 ]
  
-.right-output-stack_steps-auto[
-<div id="htmlwidget-05d6a28709b793809fc1" style="width:600px;height:500px;" class="highchart html-widget"></div>
-<script type="application/json" data-for="htmlwidget-05d6a28709b793809fc1">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"}]},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+.panel2-stack_steps-auto[
+<div id="htmlwidget-b2b594d6719da51e7e62" style="width:600px;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b2b594d6719da51e7e62">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"}]},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
-class: split-40
 count: false
  
 ### On with the chart
-.left-code-stack_steps-auto[
+.panel1-stack_steps-auto[
 
 ```r
 highchart(height = 500,width = 600 )%&gt;%  
@@ -209,17 +208,16 @@ highchart(height = 500,width = 600 )%&gt;%
 ```
 ]
  
-.right-output-stack_steps-auto[
-<div id="htmlwidget-caa8a1633affe4defeb9" style="width:600px;height:500px;" class="highchart html-widget"></div>
-<script type="application/json" data-for="htmlwidget-caa8a1633affe4defeb9">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"}]},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+.panel2-stack_steps-auto[
+<div id="htmlwidget-03da516cd283c6967f30" style="width:600px;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-03da516cd283c6967f30">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"}]},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
-class: split-40
 count: false
  
 ### On with the chart
-.left-code-stack_steps-auto[
+.panel1-stack_steps-auto[
 
 ```r
 highchart(height = 500,width = 600 )%&gt;%  
@@ -232,17 +230,16 @@ highchart(height = 500,width = 600 )%&gt;%
 ```
 ]
  
-.right-output-stack_steps-auto[
-<div id="htmlwidget-4b4ee817acd4826d49dd" style="width:600px;height:500px;" class="highchart html-widget"></div>
-<script type="application/json" data-for="htmlwidget-4b4ee817acd4826d49dd">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"},{"data":[338,51,235],"name":">20"}]},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+.panel2-stack_steps-auto[
+<div id="htmlwidget-f8da63f76877cdf006c6" style="width:600px;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f8da63f76877cdf006c6">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"},{"data":[338,51,235],"name":">20"}]},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
-class: split-40
 count: false
  
 ### On with the chart
-.left-code-stack_steps-auto[
+.panel1-stack_steps-auto[
 
 ```r
 highchart(height = 500,width = 600 )%&gt;%  
@@ -256,17 +253,16 @@ highchart(height = 500,width = 600 )%&gt;%
 ```
 ]
  
-.right-output-stack_steps-auto[
-<div id="htmlwidget-9f82f69e714a0f43745f" style="width:600px;height:500px;" class="highchart html-widget"></div>
-<script type="application/json" data-for="htmlwidget-9f82f69e714a0f43745f">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"},{"data":[338,51,235],"name":">20"}],"colors":["lightgreen","yellow","orange","red"]},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+.panel2-stack_steps-auto[
+<div id="htmlwidget-1d0a74b747e9d5118069" style="width:600px;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1d0a74b747e9d5118069">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"},{"data":[338,51,235],"name":">20"}],"colors":["lightgreen","yellow","orange","red"]},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
-class: split-40
 count: false
  
 ### On with the chart
-.left-code-stack_steps-auto[
+.panel1-stack_steps-auto[
 
 ```r
 highchart(height = 500,width = 600 )%&gt;%  
@@ -281,17 +277,16 @@ highchart(height = 500,width = 600 )%&gt;%
 ```
 ]
  
-.right-output-stack_steps-auto[
-<div id="htmlwidget-3c2fae525ec82fc015be" style="width:600px;height:500px;" class="highchart html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3c2fae525ec82fc015be">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"stacking":"normal"},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"},{"data":[338,51,235],"name":">20"}],"colors":["lightgreen","yellow","orange","red"]},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+.panel2-stack_steps-auto[
+<div id="htmlwidget-071530333f4cf36e5a2e" style="width:600px;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-071530333f4cf36e5a2e">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"stacking":"normal"},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"},{"data":[338,51,235],"name":">20"}],"colors":["lightgreen","yellow","orange","red"]},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
-class: split-40
 count: false
  
 ### On with the chart
-.left-code-stack_steps-auto[
+.panel1-stack_steps-auto[
 
 ```r
 highchart(height = 500,width = 600 )%&gt;%  
@@ -307,17 +302,16 @@ highchart(height = 500,width = 600 )%&gt;%
 ```
 ]
  
-.right-output-stack_steps-auto[
-<div id="htmlwidget-534e3096ae6c7d42fccf" style="width:600px;height:500px;" class="highchart html-widget"></div>
-<script type="application/json" data-for="htmlwidget-534e3096ae6c7d42fccf">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"stacking":"percent"},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"},{"data":[338,51,235],"name":">20"}],"colors":["lightgreen","yellow","orange","red"]},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+.panel2-stack_steps-auto[
+<div id="htmlwidget-d6c0dc4c6a45726be79c" style="width:600px;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d6c0dc4c6a45726be79c">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"stacking":"percent"},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"},{"data":[338,51,235],"name":">20"}],"colors":["lightgreen","yellow","orange","red"]},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
-class: split-40
 count: false
  
 ### On with the chart
-.left-code-stack_steps-auto[
+.panel1-stack_steps-auto[
 
 ```r
 highchart(height = 500,width = 600 )%&gt;%  
@@ -334,17 +328,16 @@ highchart(height = 500,width = 600 )%&gt;%
 ```
 ]
  
-.right-output-stack_steps-auto[
-<div id="htmlwidget-13d6198b9afe4f567f5a" style="width:600px;height:500px;" class="highchart html-widget"></div>
-<script type="application/json" data-for="htmlwidget-13d6198b9afe4f567f5a">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"stacking":"percent","dataLabels":{"enabled":true}},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"},{"data":[338,51,235],"name":">20"}],"colors":["lightgreen","yellow","orange","red"]},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+.panel2-stack_steps-auto[
+<div id="htmlwidget-0b08977a8dac7cefa8c3" style="width:600px;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0b08977a8dac7cefa8c3">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"stacking":"percent","dataLabels":{"enabled":true}},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"},{"data":[338,51,235],"name":">20"}],"colors":["lightgreen","yellow","orange","red"]},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
-class: split-40
 count: false
  
 ### On with the chart
-.left-code-stack_steps-auto[
+.panel1-stack_steps-auto[
 
 ```r
 highchart(height = 500,width = 600 )%&gt;%  
@@ -362,17 +355,16 @@ highchart(height = 500,width = 600 )%&gt;%
 ```
 ]
  
-.right-output-stack_steps-auto[
-<div id="htmlwidget-f73ae053c301898d6d5e" style="width:600px;height:500px;" class="highchart html-widget"></div>
-<script type="application/json" data-for="htmlwidget-f73ae053c301898d6d5e">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"stacking":"percent","dataLabels":{"enabled":true,"format":"{point.y} ({point.percentage:.0f}%)"}},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"},{"data":[338,51,235],"name":">20"}],"colors":["lightgreen","yellow","orange","red"]},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+.panel2-stack_steps-auto[
+<div id="htmlwidget-bd6a76e9438881d5e5d1" style="width:600px;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-bd6a76e9438881d5e5d1">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"stacking":"percent","dataLabels":{"enabled":true,"format":"{point.y} ({point.percentage:.0f}%)"}},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"},{"data":[338,51,235],"name":">20"}],"colors":["lightgreen","yellow","orange","red"]},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
-class: split-40
 count: false
  
 ### On with the chart
-.left-code-stack_steps-auto[
+.panel1-stack_steps-auto[
 
 ```r
 highchart(height = 500,width = 600 )%&gt;%  
@@ -391,17 +383,16 @@ highchart(height = 500,width = 600 )%&gt;%
 ```
 ]
  
-.right-output-stack_steps-auto[
-<div id="htmlwidget-c1379abb39ad391d3869" style="width:600px;height:500px;" class="highchart html-widget"></div>
-<script type="application/json" data-for="htmlwidget-c1379abb39ad391d3869">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"stacking":"percent","dataLabels":{"enabled":true,"format":"{point.y} ({point.percentage:.0f}%)"}},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"},{"data":[338,51,235],"name":">20"}],"colors":["lightgreen","yellow","orange","red"],"tooltip":{"pointFormat":"{series.name} gap<br><b>{point.y} ({point.percentage:.0f}%)<\/b>"}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+.panel2-stack_steps-auto[
+<div id="htmlwidget-a061294b56d39e267f94" style="width:600px;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a061294b56d39e267f94">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"stacking":"percent","dataLabels":{"enabled":true,"format":"{point.y} ({point.percentage:.0f}%)"}},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"},{"data":[338,51,235],"name":">20"}],"colors":["lightgreen","yellow","orange","red"],"tooltip":{"pointFormat":"{series.name} gap<br><b>{point.y} ({point.percentage:.0f}%)<\/b>"}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
-class: split-40
 count: false
  
 ### On with the chart
-.left-code-stack_steps-auto[
+.panel1-stack_steps-auto[
 
 ```r
 highchart(height = 500,width = 600 )%&gt;%  
@@ -421,17 +412,16 @@ highchart(height = 500,width = 600 )%&gt;%
 ```
 ]
  
-.right-output-stack_steps-auto[
-<div id="htmlwidget-fcb3f4cefc42571b9365" style="width:600px;height:500px;" class="highchart html-widget"></div>
-<script type="application/json" data-for="htmlwidget-fcb3f4cefc42571b9365">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null},"gridLineWidth":0},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"stacking":"percent","dataLabels":{"enabled":true,"format":"{point.y} ({point.percentage:.0f}%)"}},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"},{"data":[338,51,235],"name":">20"}],"colors":["lightgreen","yellow","orange","red"],"tooltip":{"pointFormat":"{series.name} gap<br><b>{point.y} ({point.percentage:.0f}%)<\/b>"}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+.panel2-stack_steps-auto[
+<div id="htmlwidget-73e60f63e29477b93ebf" style="width:600px;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-73e60f63e29477b93ebf">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null},"gridLineWidth":0},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"stacking":"percent","dataLabels":{"enabled":true,"format":"{point.y} ({point.percentage:.0f}%)"}},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"},{"data":[338,51,235],"name":">20"}],"colors":["lightgreen","yellow","orange","red"],"tooltip":{"pointFormat":"{series.name} gap<br><b>{point.y} ({point.percentage:.0f}%)<\/b>"}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
-class: split-40
 count: false
  
 ### On with the chart
-.left-code-stack_steps-auto[
+.panel1-stack_steps-auto[
 
 ```r
 highchart(height = 500,width = 600 )%&gt;%  
@@ -452,17 +442,16 @@ highchart(height = 500,width = 600 )%&gt;%
 ```
 ]
  
-.right-output-stack_steps-auto[
-<div id="htmlwidget-b7438b9a5fa54c82fcf2" style="width:600px;height:500px;" class="highchart html-widget"></div>
-<script type="application/json" data-for="htmlwidget-b7438b9a5fa54c82fcf2">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null},"gridLineWidth":0,"labels":{"enabled":false}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"stacking":"percent","dataLabels":{"enabled":true,"format":"{point.y} ({point.percentage:.0f}%)"}},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"},{"data":[338,51,235],"name":">20"}],"colors":["lightgreen","yellow","orange","red"],"tooltip":{"pointFormat":"{series.name} gap<br><b>{point.y} ({point.percentage:.0f}%)<\/b>"}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+.panel2-stack_steps-auto[
+<div id="htmlwidget-9f8148c5f687d5d917cd" style="width:600px;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9f8148c5f687d5d917cd">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":null},"gridLineWidth":0,"labels":{"enabled":false}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"stacking":"percent","dataLabels":{"enabled":true,"format":"{point.y} ({point.percentage:.0f}%)"}},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"},{"data":[338,51,235],"name":">20"}],"colors":["lightgreen","yellow","orange","red"],"tooltip":{"pointFormat":"{series.name} gap<br><b>{point.y} ({point.percentage:.0f}%)<\/b>"}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
-class: split-40
 count: false
  
 ### On with the chart
-.left-code-stack_steps-auto[
+.panel1-stack_steps-auto[
 
 ```r
 highchart(height = 500,width = 600 )%&gt;%  
@@ -484,17 +473,16 @@ highchart(height = 500,width = 600 )%&gt;%
 ```
 ]
  
-.right-output-stack_steps-auto[
-<div id="htmlwidget-960dbb926f25c277f3c6" style="width:600px;height:500px;" class="highchart html-widget"></div>
-<script type="application/json" data-for="htmlwidget-960dbb926f25c277f3c6">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":"% of Releases"},"gridLineWidth":0,"labels":{"enabled":false}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"stacking":"percent","dataLabels":{"enabled":true,"format":"{point.y} ({point.percentage:.0f}%)"}},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"},{"data":[338,51,235],"name":">20"}],"colors":["lightgreen","yellow","orange","red"],"tooltip":{"pointFormat":"{series.name} gap<br><b>{point.y} ({point.percentage:.0f}%)<\/b>"}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+.panel2-stack_steps-auto[
+<div id="htmlwidget-f16850688adc2323c95d" style="width:600px;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f16850688adc2323c95d">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":"% of Releases"},"gridLineWidth":0,"labels":{"enabled":false}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"stacking":"percent","dataLabels":{"enabled":true,"format":"{point.y} ({point.percentage:.0f}%)"}},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"},{"data":[338,51,235],"name":">20"}],"colors":["lightgreen","yellow","orange","red"],"tooltip":{"pointFormat":"{series.name} gap<br><b>{point.y} ({point.percentage:.0f}%)<\/b>"}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
-class: split-40
 count: false
  
 ### On with the chart
-.left-code-stack_steps-auto[
+.panel1-stack_steps-auto[
 
 ```r
 highchart(height = 500,width = 600 )%&gt;%  
@@ -517,17 +505,16 @@ highchart(height = 500,width = 600 )%&gt;%
 ```
 ]
  
-.right-output-stack_steps-auto[
-<div id="htmlwidget-19d5ca54acb1e58158c2" style="width:600px;height:500px;" class="highchart html-widget"></div>
-<script type="application/json" data-for="htmlwidget-19d5ca54acb1e58158c2">{"x":{"hc_opts":{"title":{"text":"Gap between Critic and User metacritic scores"},"yAxis":{"title":{"text":"% of Releases"},"gridLineWidth":0,"labels":{"enabled":false}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"stacking":"percent","dataLabels":{"enabled":true,"format":"{point.y} ({point.percentage:.0f}%)"}},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"},{"data":[338,51,235],"name":">20"}],"colors":["lightgreen","yellow","orange","red"],"tooltip":{"pointFormat":"{series.name} gap<br><b>{point.y} ({point.percentage:.0f}%)<\/b>"}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+.panel2-stack_steps-auto[
+<div id="htmlwidget-648b099487dd5626a40c" style="width:600px;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-648b099487dd5626a40c">{"x":{"hc_opts":{"title":{"text":"Gap between Critic and User metacritic scores"},"yAxis":{"title":{"text":"% of Releases"},"gridLineWidth":0,"labels":{"enabled":false}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"stacking":"percent","dataLabels":{"enabled":true,"format":"{point.y} ({point.percentage:.0f}%)"}},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"},{"data":[338,51,235],"name":">20"}],"colors":["lightgreen","yellow","orange","red"],"tooltip":{"pointFormat":"{series.name} gap<br><b>{point.y} ({point.percentage:.0f}%)<\/b>"}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
-class: split-40
 count: false
  
 ### On with the chart
-.left-code-stack_steps-auto[
+.panel1-stack_steps-auto[
 
 ```r
 highchart(height = 500,width = 600 )%&gt;%  
@@ -551,17 +538,16 @@ highchart(height = 500,width = 600 )%&gt;%
 ```
 ]
  
-.right-output-stack_steps-auto[
-<div id="htmlwidget-1d9cc2fc2e2a9f58e2fa" style="width:600px;height:500px;" class="highchart html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1d9cc2fc2e2a9f58e2fa">{"x":{"hc_opts":{"title":{"text":"Gap between Critic and User metacritic scores"},"yAxis":{"title":{"text":"% of Releases"},"gridLineWidth":0,"labels":{"enabled":false}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"stacking":"percent","dataLabels":{"enabled":true,"format":"{point.y} ({point.percentage:.0f}%)"}},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"},{"data":[338,51,235],"name":">20"}],"colors":["lightgreen","yellow","orange","red"],"tooltip":{"pointFormat":"{series.name} gap<br><b>{point.y} ({point.percentage:.0f}%)<\/b>"},"subtitle":{"text":"(in a scale of 100)"}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+.panel2-stack_steps-auto[
+<div id="htmlwidget-0304596d23745dc0d907" style="width:600px;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0304596d23745dc0d907">{"x":{"hc_opts":{"title":{"text":"Gap between Critic and User metacritic scores"},"yAxis":{"title":{"text":"% of Releases"},"gridLineWidth":0,"labels":{"enabled":false}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"stacking":"percent","dataLabels":{"enabled":true,"format":"{point.y} ({point.percentage:.0f}%)"}},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"},{"data":[338,51,235],"name":">20"}],"colors":["lightgreen","yellow","orange","red"],"tooltip":{"pointFormat":"{series.name} gap<br><b>{point.y} ({point.percentage:.0f}%)<\/b>"},"subtitle":{"text":"(in a scale of 100)"}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
-class: split-40
 count: false
  
 ### On with the chart
-.left-code-stack_steps-auto[
+.panel1-stack_steps-auto[
 
 ```r
 highchart(height = 500,width = 600 )%&gt;%  
@@ -585,25 +571,37 @@ highchart(height = 500,width = 600 )%&gt;%
 ```
 ]
  
-.right-output-stack_steps-auto[
-<div id="htmlwidget-d0f226df3446e229e81f" style="width:600px;height:500px;" class="highchart html-widget"></div>
-<script type="application/json" data-for="htmlwidget-d0f226df3446e229e81f">{"x":{"hc_opts":{"title":{"text":"Gap between Critic and User metacritic scores"},"yAxis":{"title":{"text":"% of Releases"},"gridLineWidth":0,"labels":{"enabled":false}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"stacking":"percent","dataLabels":{"enabled":true,"format":"{point.y} ({point.percentage:.0f}%)"}},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"},{"data":[338,51,235],"name":">20"}],"colors":["lightgreen","yellow","orange","red"],"tooltip":{"pointFormat":"{series.name} gap<br><b>{point.y} ({point.percentage:.0f}%)<\/b>"},"subtitle":{"text":"(in a scale of 100)"}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+.panel2-stack_steps-auto[
+<div id="htmlwidget-b9f81146d682b048218d" style="width:600px;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b9f81146d682b048218d">{"x":{"hc_opts":{"title":{"text":"Gap between Critic and User metacritic scores"},"yAxis":{"title":{"text":"% of Releases"},"gridLineWidth":0,"labels":{"enabled":false}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"stacking":"percent","dataLabels":{"enabled":true,"format":"{point.y} ({point.percentage:.0f}%)"}},"treemap":{"layoutAlgorithm":"squarified"}},"chart":{"type":"bar"},"xAxis":{"categories":["Playstation-4","Switch","Xbox-One"]},"series":[{"data":[667,742,352],"name":"0-5"},{"data":[558,251,312],"name":"5-10"},{"data":[527,147,375],"name":"10-20"},{"data":[338,51,235],"name":">20"}],"colors":["lightgreen","yellow","orange","red"],"tooltip":{"pointFormat":"{series.name} gap<br><b>{point.y} ({point.percentage:.0f}%)<\/b>"},"subtitle":{"text":"(in a scale of 100)"}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
 ]
 
 &lt;style&gt;
-.left-code-stack_steps-auto {
-  color: #777;
-  width: 38%;
-  height: 92%;
+.panel1-stack_steps-auto {
+  color: black;
+  width: 38.6060606060606%;
   float: left;
+  padding-left: 1%;
   font-size: 80%
 }
-.right-output-stack_steps-auto {
-  width: 60%;
-  float: right;
+.panel2-stack_steps-auto {
+  color: black;
+  width: 59.3939393939394%;
+  float: left;
   padding-left: 1%;
+  font-size: 80%
+}
+.panel3-stack_steps-auto {
+  color: black;
+  width: NA%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
 }
 &lt;/style&gt;
+
+
+
 
 
 
